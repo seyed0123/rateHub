@@ -97,7 +97,7 @@ class setting(View):
             data_dict['following_num'] = Follower.objects.filter(follower=person_id).count()
             if Rate.objects.filter(user=person_id).count()>0:
                 person_rates = Rate.objects.filter(user=person_id).aggregate(Count('rate'), Sum('rate'))
-                data_dict['rate_num'] = person_rates['rate__sum'] / person_rates['rate__count']
+                data_dict['rate_num'] = round(person_rates['rate__sum'] / person_rates['rate__count'], 2)
             else:
                 data_dict['rate_num']=0
             return JsonResponse(data_dict)
