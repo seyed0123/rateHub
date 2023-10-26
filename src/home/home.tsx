@@ -4,6 +4,7 @@ import { RouteComponentProps } from 'react-router-dom';
 import Header from "./header";
 import Recom from "./recom";
 import Posts from "./post";
+import Storys from "./story";
 
 interface Props extends RouteComponentProps {
     id:number
@@ -95,7 +96,11 @@ class Home extends React.Component<Props>
             <div>
                 <Header content={{path:this.state.profile ,username:this.state.username , id:this.state.id , search:this.searchUsername}} />
                 <div className='container_body'>
-                    <Recom id={this.state.id} text={this.state.text} persons={this.state.persons}/>
+                    <div className='right-grid' id='right_grid'>
+                        <Recom id={this.state.id} text={this.state.text} persons={this.state.persons}/>
+                        <Storys/>
+                    </div>
+
                     <Posts num={this.state.num}/>
                 </div>
                 <div style={{justifyContent:'center' , display:'flex'}}>

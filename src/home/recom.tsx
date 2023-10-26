@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom';
+
 interface person{
     content:{
         img:string
@@ -24,9 +25,10 @@ class Recom extends React.Component<info>{
             return <Person key={user.id} content={{img:user.imgOwner , id_user:user.id , username:user.user}}/>
         })
         return (
-            <div className='right-grid' id='right_grid'>
+            <div className={'recom_persons'}>
                 <h2>{this.props.text}</h2>
                 {jsx}
+
             </div>
         );
     }

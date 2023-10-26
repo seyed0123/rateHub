@@ -6,10 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="cefe2fdf-3f11-46f2-b926-3a2aed29965e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sing/Signin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sing/Signin.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sing/create.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sing/create.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/home/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/recom.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/recom.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home1/header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home1/home.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home1/img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home1/posts.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home1/recoms.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/profile/profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/profile/profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/profile1/back.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/profile1/header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/profile1/img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/profile1/posts.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/profile1/profile.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setting/postAdd.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/setting/postAdd.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +55,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "front",
-    "last_opened_file_path": "G:/code/javaScript/ratehub/src",
+    "last_opened_file_path": "G:/code/javaScript/ratehub/src/profile",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,9 +68,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\code\javaScript\ratehub\src" />
       <recent name="G:\code\javaScript\ratehub\src\profile" />
       <recent name="G:\code\javaScript\ratehub\src\home" />
+      <recent name="G:\code\javaScript\ratehub\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\code\javaScript\ratehub\src" />
@@ -87,11 +99,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698233694508</updated>
-      <workItem from="1698233695583" duration="17907000" />
+      <workItem from="1698233695583" duration="27090000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

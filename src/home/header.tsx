@@ -15,15 +15,23 @@ class Header extends React.Component<headerProps>{
     }
     constructor(props:headerProps) {
         super(props);
+        this.handleChange = this.handleChange.bind(this);
     }
     handleSearch = () => {
+        this.props.content.search(this.state.username);
+    }
+    handleChange(event:any) {
+        const target = event.target;
+        const name = target.name;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        this.setState({ [name]: value });
         this.props.content.search(this.state.username);
     }
     render() {
         return (
             <header>
                 <div  id='header'>
-                        <input name={'username'} className={'input'} type={'text'} placeholder={'username'} onChange={e => this.setState({ username: e.target.value })} value={this.state.username}/>
+                        <input name={'username'} className={'input'} type={'text'} placeholder={'username'} onChange={this.handleChange} value={this.state.username}/>
                     <button  className={'buttons'} onClick={this.handleSearch}>search</button>
                         <Link to={`/profile/${this.props.content.id}`}>
                             <img src={this.props.content.path} className={'img-rounded profile_img'} width='7%' alt={'profile'}/>

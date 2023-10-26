@@ -104,16 +104,22 @@ body{
     flex-direction: row;
 }
 
-.left-grid,
-.right-grid {
+.left-grid
+ {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10px; /* Adjust the gap between boxes as needed */
+    grid-gap: 10px;
 
     box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.5);
     padding:2%;
     background-color: #2A9D8F;
     margin: 2%;
+}
+.right-grid{
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+
 }
 #left_grid{
     flex: 4;
@@ -121,13 +127,29 @@ body{
 #right_grid{
     flex: 1;
 }
+.recom_persons{
+    padding:4%;
+    margin: 2%;
+    background-color: #2A9D8F;
+    flex: 3;
+}
+.story_wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1%;
+    padding:2%;
+    margin: 2%;
+    background-color: #2A9D8F;
+    flex: 5;
+}
 .box {
     background-color: #F4A261;
     padding: 20px;
     position: relative;
 }
 .profile_post{
-
+    height: 100%;
     width: 10%;
     z-index: 1;
 }
@@ -147,6 +169,10 @@ body{
     font-family: 'Raleway', sans-serif;
     z-index: 1;
 
+}
+.profile_story{
+    width: 20%;
+    height: 100%;
 }
 .img_fullscreen {
     width: 100%;
@@ -288,7 +314,6 @@ ul li {
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
 }
-
 .profile_post_wrapper{
     margin: 2%;
     display: grid;
@@ -1083,4 +1108,7 @@ style-input input::-webkit-input-placeholder {
     background-clip: text;
     -webkit-background-clip: text;
     transform: translateX(-0.02em);
+}
+.like_post{
+    border: 0px;
 }
