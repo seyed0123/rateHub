@@ -41,16 +41,20 @@ class SignIn extends React.Component<SignInProps>{
     render() {
         return (
             <div className={'sing_in_wrapper'}>
+                <h1 className={'butter'}>RateHub</h1>
                 <div className={'sign_in'}>
-                    <h1 className={'fancy'}>login</h1>
-                    <h1 className={'butter'}>OXDgram</h1>
-                    <div className="style-input">
-                        <input type={'text'} placeholder={'username'} name={'username'} onChange={this.handleChange}/>
+                    <div className={'login_wrapper'}>
+                        <h1 className={'fancy'}>login</h1>
+                        <div className={'login_input_wrapper'}>
+                            <div className="style-input">
+                                <input type={'text'} placeholder={'username'} name={'username'} onChange={this.handleChange}/>
+                            </div>
+                            <div className="style-input">
+                                <input type={'password'} placeholder={'password'} name={'password'} onChange={this.handleChange}/>
+                            </div>
+                            <button className={'profile_follow'} onClick={this.handleSubmit}>login</button>
+                        </div>
                     </div>
-                    <div className="style-input">
-                        <input type={'password'} placeholder={'password'} name={'password'} onChange={this.handleChange}/>
-                    </div>
-                    <button className={'profile_follow'} onClick={this.handleSubmit}>login</button>
                     <h2>OR</h2>
                     <div className="text_container">
                         <p className={'multi_color'} onClick={this.handleCreateClick}>Sign_up</p>

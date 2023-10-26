@@ -100,6 +100,8 @@ body{
 
 .container_body {
     justify-content: center;
+    display: flex;
+    flex-direction: row;
 }
 
 .left-grid,
@@ -114,14 +116,10 @@ body{
     margin: 2%;
 }
 #left_grid{
-    flex: 0.80;
-    margin-right: 10%;
-    margin-left: 10%;
+    flex: 4;
 }
 #right_grid{
-    flex: 0.20;
-    margin-right: 20%;
-    margin-left: 30%;
+    flex: 1;
 }
 .box {
     background-color: #F4A261;
@@ -407,16 +405,15 @@ ul li {
 }
 
 .fancy {
-
-    font-family: "Monoton", Helvetica, sans-serif;
+    font-family: Papyrus, Helvetica, sans-serif;
     margin: 2% auto;
 
     letter-spacing: 5px;
-    font-size: 13vw ;
+    font-size: 12vw ;
     text-transform: uppercase;
 
     color: transparent;
-    background: linear-gradient(7deg, #F5EE9E 50%, #AB3428 0);
+    background: linear-gradient(7deg, #A5C9CA 50%, #395B64   0);
     -webkit-background-clip: text;
     -webkit-text-stroke: 0.25px black;
 
@@ -436,21 +433,12 @@ ul li {
 }
 
 .multi_color {
-    font-family: "Exo", sans-serif;
+    font-family: Papyrus, sans-serif;
     font-weight: 900;
     width: min-content;
     margin: 5px auto;
     text-transform: uppercase;
-    background: linear-gradient(219deg,
-    var(--color-1) 19%,
-    transparent 19%, transparent 20%,
-    var(--color-2) 20%, var(--color-2) 39%,
-    transparent 39%, transparent 40%,
-    var(--color-3) 40%, var(--color-3) 59%,
-    transparent 59%, transparent 60%,
-    var(--color-4) 60%, var(--color-4) 79%,
-    transparent 79%, transparent 80%,
-    var(--color-5) 80%);
+    background: linear-gradient(170deg, #0E8388 50%, #064663   0);;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -477,23 +465,16 @@ ul li {
 
 
 .butter{
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Calligraffitti&display=swap');
-    font-family: 'Calligraffitti', cursive;
+    font-family: "Book Antiqua", cursive;
     font-weight: 700;
     font-size: 10rem;
     position: absolute;
-    top: 13%;
+    top: 20%;
     left:50%;
     transform: translate(-50%,-50%);
     letter-spacing: 0.02em;
     text-align: center;
-    color: #F9f1cc;
-    text-shadow: 5px 5px 0px #FFB650,
-    10px 10px 0px #FFD662,
-    15px 15px 0px  #E76F51,
-    20px 20px 0px #2A9D8F,
-    25px 25px 0px #6868AC,
-    30px 30px 0px darkblue;
+    color: #93B1A6;
 }
 
 .sign_in{
@@ -513,8 +494,11 @@ ul li {
     margin: 2% auto; /* Centers the element */
 }
 .sing_in_wrapper{
-    margin: 21%;
-    background-color: #E9C46A;
+    margin-top: 20%;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-bottom: 4%;
+    background-color: #B9B4C7;
     padding: 4%;
 }
 
@@ -522,7 +506,9 @@ ul li {
      margin: 10%;
     margin-top: 20%;
 }
+.create_input_wrapper{
 
+}
 .check{
     background-color: #fafafa;
     border: 1px solid #cacece;
@@ -559,6 +545,11 @@ ul li {
     padding: 1.4rem 2rem 1.6rem;
     background: rgba(57, 63, 84, 0.8);
 }
+.login_input_wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
 .style-input:after {
          content: "";
          position: absolute;
@@ -1059,4 +1050,37 @@ style-input input::-webkit-input-placeholder {
 .profile_rate_wrapper{
     display: flex;
     flex-direction: column;
+}
+
+.login_wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.wrapper_loginpage {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(1.5rem, 1rem + 18vw, 15rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(hsl(0, 0%, 100%));
+}
+
+.wrapper > div {
+    grid-area: 1/1/-1/-1;
+}
+.top {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+}
+.bottom {
+    clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+    color: transparent;
+    background: -webkit-linear-gradient(177deg, black 53%, var(hsl(0, 0%, 100%)) 65%);
+    background: linear-gradient(177deg, black 53%, var(hsl(0, 0%, 100%)) 65%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: translateX(-0.02em);
 }

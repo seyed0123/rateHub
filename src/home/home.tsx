@@ -16,7 +16,7 @@ class Home extends React.Component<Props>
         loading:true,
         num:5,
         id:0,
-        text:'Recommendation',
+        text:'Discover people',
         persons:[{}],
     }
 

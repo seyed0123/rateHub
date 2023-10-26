@@ -46,9 +46,9 @@ class Create extends React.Component<Props>{
     render() {
         return (
             <div className={'sing_in_wrapper create_wrapper'}>
-                <h1 className={'butter'}>OXDgram</h1>
+                <h1 className={'butter'}>RateHub</h1>
                 <div className={'sign_in create'}>
-                    <h1 className={'fancy'}>Create</h1>
+                    <h1 className={'fancy'}>Sign up</h1>
                     <form onSubmit={this.handleSubmit} className={'sign_in'}>
                         <input className={'input'} type={'text'} name="username" placeholder={'username'} onChange={this.handleChange} />
                         <input className={'input'} type={'password'} name="password" placeholder={'password'} onChange={this.handleChange} />
