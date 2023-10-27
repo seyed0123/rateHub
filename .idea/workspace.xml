@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cefe2fdf-3f11-46f2-b926-3a2aed29965e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +52,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\code\javaScript\ratehub\public" />
       <recent name="G:\code\javaScript\ratehub\src\profile" />
       <recent name="G:\code\javaScript\ratehub\src\home" />
       <recent name="G:\code\javaScript\ratehub\src" />
@@ -86,7 +86,7 @@
       <updated>1698233694508</updated>
       <workItem from="1698233695583" duration="28259000" />
       <workItem from="1698350209695" duration="881000" />
-      <workItem from="1698386049911" duration="11960000" />
+      <workItem from="1698386049911" duration="12982000" />
     </task>
     <servers />
   </component>
