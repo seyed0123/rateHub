@@ -1,5 +1,11 @@
+from django.core.files.base import ContentFile
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.db import models
+from io import BytesIO
+import qrcode
+from django.core.files import File
+from PIL import Image, ImageDraw
 
 User = get_user_model()
 
@@ -15,6 +21,19 @@ class person(models.Model):
     email = models.EmailField()
     can_follow = models.BooleanField()
     can_search = models.BooleanField()
+    QRcode = models.ImageField(upload_to='QR')
+
+    def generate_qr_code(self, url):
+        qrcode_img = qrcode.make(url)
+        canvas = Image.new('RGB', (300, 300), 'white')
+        draw = ImageDraw.Draw(canvas)
+        canvas.paste(qrcode_img)
+
+        fname = f'qrcode-{self.id}' + '.png'
+        buffer = BytesIO()
+        canvas.save(buffer, "PNG")
+        self.QRcode.save(fname, File(buffer), save=False)
+        canvas.close()
 
 
 class Follower(models.Model):

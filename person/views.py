@@ -16,11 +16,12 @@ from .models import person, Follower, Rate
 from django.db.models import Count, Sum
 
 IDs = {}
-
+baseUrl = 'localhost:3000'
 
 @method_decorator(csrf_exempt, name='dispatch')
 class Create(View):
     def post(self, request, *args, **kwargs):
+
         data = json.loads(request.body.decode('utf-8'))
         username = data.get('username')
         password = data.get('password')
@@ -38,6 +39,7 @@ class Create(View):
                                         can_follow=True,
                                         can_search=True)
         person_.save()
+        person_.generate_qr_code(url = f'{baseUrl}/profile/{person_.id}')
         return JsonResponse({'message': 'Data saved successfully'})
 
     def get(self, request, *args, **kwargs):
@@ -88,10 +90,11 @@ class setting(View):
         person_id = kwargs.get('person_id')
         try:
             data_obj = person.objects.get(id=person_id)
-            data_dict = model_to_dict(data_obj)
+git             data_dict = model_to_dict(data_obj)
 
             data_dict['profile_img'] = str(data_dict['profile_img'])
             data_dict['banner_img'] = str(data_dict['banner_img'])
+            data_dict['QRcode'] = f'QR/qrcode-{data_dict["id"]}.png'
             data_dict['follower_num'] = Follower.objects.filter(user=person_id).count()
 
             data_dict['following_num'] = Follower.objects.filter(follower=person_id).count()

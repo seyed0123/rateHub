@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'person',
     'post',
-    'story'
+    'story',
+    'qrcode',
 ]
 
 MIDDLEWARE = [
