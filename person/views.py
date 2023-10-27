@@ -90,7 +90,7 @@ class setting(View):
         person_id = kwargs.get('person_id')
         try:
             data_obj = person.objects.get(id=person_id)
-git             data_dict = model_to_dict(data_obj)
+            data_dict = model_to_dict(data_obj)
 
             data_dict['profile_img'] = str(data_dict['profile_img'])
             data_dict['banner_img'] = str(data_dict['banner_img'])
