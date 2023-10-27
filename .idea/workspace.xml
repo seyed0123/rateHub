@@ -6,22 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cefe2fdf-3f11-46f2-b926-3a2aed29965e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home/recom.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/recom.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home1/header.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home1/home.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home1/img1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home1/posts.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home1/recoms.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/profile/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/profile/header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/profile/profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/profile/profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/profile1/back.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/profile1/header.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/profile1/img1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/profile1/posts.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/profile1/profile.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setting/postAdd.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/setting/postAdd.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,22 +37,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "front",
-    "last_opened_file_path": "G:/code/javaScript/ratehub/src/profile",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "G:\\code\\javaScript\\ratehub\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;front&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/code/javaScript/ratehub/src/profile&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;G:\\code\\javaScript\\ratehub\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\code\javaScript\ratehub\src\profile" />
@@ -99,7 +86,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698233694508</updated>
-      <workItem from="1698233695583" duration="27090000" />
+      <workItem from="1698233695583" duration="28259000" />
+      <workItem from="1698350209695" duration="881000" />
+      <workItem from="1698386049911" duration="7808000" />
     </task>
     <servers />
   </component>

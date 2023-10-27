@@ -10,7 +10,8 @@ interface info{
         follow:number;
         following:number
         posts:number;
-        isFollow:boolean
+        isFollow:boolean;
+        qr_code:any;
     }
     id:number;
     num_post:number;
@@ -130,6 +131,7 @@ class Header extends React.Component<info>{
                             <input type="range" id="quantity" className={'slider'} name="quantity" onChange={this.handleSlider} min="0" max="10" step="1" value={this.state.input_rate}/>
                             <button className='profile_follow' onClick={this.handelRate}>submit</button>
                         </div>
+                        <button className={'profile_follow'} onClick={this.props.content.qr_code}>QR code</button>
                     </div>
                 </div>
             </div>

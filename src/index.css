@@ -1112,3 +1112,21 @@ style-input input::-webkit-input-placeholder {
 .like_post{
     border: 0px;
 }
+.qr-wrapper {position:relative;
+
+}
+.test1{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+
+}
+ .username_qr,.rate_qr{
+     color: white;
+     font-size: 50px;
+     text-shadow: -1px 1px 0 #000,
+     1px 1px 0 #000,
+     1px -1px 0 #000,
+     -1px -1px 0 #000;
+ }
