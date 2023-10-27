@@ -104,7 +104,7 @@ class Home extends React.Component<Props>
                     <Posts num={this.state.num}/>
                 </div>
                 <div style={{justifyContent:'center' , display:'flex'}}>
-                    <button className={'profile_follow'} onClick={this.load}>Load more</button>
+                    <button className={'profile_follow'} onClick={this.load}>See more</button>
                 </div>
             </div>
         )

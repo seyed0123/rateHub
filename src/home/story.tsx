@@ -68,9 +68,9 @@ class Storys extends React.Component <any,any>{
 
         return (
             <div className="story_wrapper">
-                <h2>stories</h2>
+                <h2>Story</h2>
                 {jsx}
-                <button className={'profile_follow'} onClick={this.load}>load more</button>
+                <button className={'profile_follow'} onClick={this.load}>See more</button>
             </div>
         );
     }

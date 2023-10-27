@@ -80,10 +80,9 @@ class Post extends React.Component<PostInter> {
                 <div className={'home_post_content'}>
                     <h2 className="name_post" >{this.props.content.owner}</h2>
                     <Link to={`/profile/${this.props.content.idOwner}`}>
-                        <img className="profile_img profile_post" src={this.props.content.imgOwner} />
                     </Link>
                 </div>
-                <p>Caption: <span className="content_post ">{this.props.content.text}</span></p>
+                <p><span className="content_post ">{this.props.content.text}</span></p>
             </div>
         );
     }

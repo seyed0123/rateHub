@@ -62,7 +62,7 @@ class PostAdd extends React.Component<info>{
         return (
             <div className={'setting_form_container_a'}>
                 <div className={'center'}>
-                    <h3>New Post</h3>
+                    <h3>Add Post</h3>
                 </div>
                 <div className={'setting_form_container'}>
                     <div className={'setting_form_content input'}>
@@ -70,13 +70,13 @@ class PostAdd extends React.Component<info>{
                         <input type={'file'} className={'setting_post_file'} accept=".jpg,.jpeg,.png" onChange={this.sendProfile}/>
                     </div>
                     <div className={'setting_form_content'}>
-                        <h5>Text:</h5>
+                        <h5>Caption:</h5>
                         <input type={'text'} className={'setting_post_text input'} name={'text'} onChange={this.handleChange}/>
                     </div>
                 </div>
-                <button className="center_b profile_follow" >submit</button>
+                <button className="center_b profile_follow" >Publish</button>
                 <div className={'center'}>
-                    <h3>New story</h3>
+                    <h3>Add story</h3>
                 </div>
                 <div className={'setting_form_container'}>
                     <div className={'setting_form_content input'}>
@@ -84,7 +84,7 @@ class PostAdd extends React.Component<info>{
                         <input type={'file'} className={'setting_post_file'} accept=".jpg,.jpeg,.png" onChange={this.send_story}/>
                     </div>
                     <div className={'setting_form_content'}>
-                        <h5>Text:</h5>
+                        <h5>Caption:</h5>
                         <input type={'text'} className={'setting_post_text input'} name={'story_text'} onChange={this.handleChange}/>
                     </div>
                 </div>

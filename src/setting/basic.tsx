@@ -152,48 +152,48 @@ class Basic extends React.Component<info>{
             <div className={'setting_form_container_a'}>
                 <div className="center">
                     <h3>
-                        Basics
+                        Profile
                     </h3>
                 </div>
                 <img  src={this.state.profile_img} className={'center profile_img setting_profile'} width='5%'/>
                 <div className={'setting_form_container'}>
                     <div className='setting_form_content'>
-                        <p className='setting_text'>Username: {this.state.username}</p>
+                        <p className='setting_text'>Username : {this.state.username}</p>
                         <input className='setting_input input' type='text' value={this.state.username} name="username" onChange={this.handleChange}/>
                     </div>
                     <div className='setting_form_content'>
-                        <p className='setting_text'>Name: {this.state.name}</p>
+                        <p className='setting_text'>Name : {this.state.name}</p>
                         <input className='setting_input input' type='text' value={this.state.name} name="name" onChange={this.handleChange}/>
                     </div>
                     <div className='setting_form_content'>
-                        <p className='setting_text'>Email: {this.state.email}</p>
+                        <p className='setting_text'>Email : {this.state.email}</p>
                         <input className='setting_input input' type='email' value={this.state.email} name="email" onChange={this.handleChange}/>
                     </div>
                     <div className='setting_form_content'>
-                        <p className='setting_text'>Can Comment:</p>
+                        <p className='setting_text'>Allow Comment :</p>
                         <input className='setting_input check' type='checkbox' defaultChecked={this.state.canComment} name="canComment" onChange={this.handleChange}/>
                     </div>
                     <div className='setting_form_content'>
-                        <p className='setting_text'>Can Follow: </p>
+                        <p className='setting_text'>Allow Follow : </p>
                         <input className='setting_input check' type='checkbox' defaultChecked={this.state.canFollow} name="canFollow" onChange={this.handleChange}/>
                     </div>
                     <div className='setting_form_content'>
-                        <p className='setting_text'>Can Search: </p>
+                        <p className='setting_text'>Allow Search : </p>
                         <input className='setting_input check' type='checkbox' defaultChecked={this.state.canSearch} name="canSearch" onChange={this.handleChange}/>
                     </div>
                     <div className='setting_form_content'>
-                        <p className='setting_text'>Boi: </p>
+                        <p className='setting_text'>Bio : </p>
                         <textarea className='setting_input input' value={this.state.boi} name="boi" onChange={this.handleChange}/>
                     </div>
                     <div className='setting_form_content'>
-                        <p className='setting_text'>profile: </p>
+                        <p className='setting_text'>Profile Picture : </p>
                         <input className='setting_input input' type='file' accept=".jpg,.jpeg,.png" onChange={this.sendProfile}/>
                     </div>
                     <div className='setting_form_content'>
-                        <p className='setting_text'>password: </p>
-                        <input className={'input'} type={'password'} name="oldPassword" placeholder={'oldPassword'} onChange={this.handleChange} />
-                        <input className={'input'} type={'password'} name="password" placeholder={'password'} onChange={this.handleChange} />
-                        <input className={'input'} type={'password'} name="confirmPassword" placeholder={'confirm password'} onChange={this.handleChange} />
+                        <p className='setting_text'>Password : </p>
+                        <input className={'input'} type={'password'} name="oldPassword" placeholder={'Old Password'} onChange={this.handleChange} />
+                        <input className={'input'} type={'password'} name="password" placeholder={'New Password'} onChange={this.handleChange} />
+                        <input className={'input'} type={'password'} name="confirmPassword" placeholder={'Confirm New Password'} onChange={this.handleChange} />
                     </div>
                 </div>
                 <div className='setting_form_content'>
