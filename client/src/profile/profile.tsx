@@ -23,7 +23,7 @@ class Profile extends React.Component<RouteComponentProps<MatchParams>>{
 
     componentDidMount(){
 
-        let url :string= 'http://localhost:8000/post/user/'+this.state.id+'/'
+        let url :string= process.env.REACT_APP_SERVER_URL+'/post/user/'+this.state.id+'/'
         axios.get(url)
             .then(response => {
                 const userData = response.data;
@@ -36,7 +36,7 @@ class Profile extends React.Component<RouteComponentProps<MatchParams>>{
                     content:userData.map((post: { id: number; owner: number; img: string; text: any; }) => ({
                         id: post.id,
                         owner: post.owner,
-                        img: 'http://localhost:8000/media/' + post.img,
+                        img: process.env.REACT_APP_SERVER_URL+'/media/' + post.img,
                         text: post.text
                     }))
                 });
@@ -45,7 +45,7 @@ class Profile extends React.Component<RouteComponentProps<MatchParams>>{
                 console.error('Error:', error);
             });
 
-        url= 'http://localhost:8000/story/user/'+this.state.id+'/'
+        url= process.env.REACT_APP_SERVER_URL+'/story/user/'+this.state.id+'/'
         axios.get(url)
             .then(response => {
                 const userData = response.data;
@@ -58,7 +58,7 @@ class Profile extends React.Component<RouteComponentProps<MatchParams>>{
                         storys:userData.map((post: { id: number; owner: number; img: string; text: any; }) => ({
                             id: post.id,
                             owner: post.owner,
-                            img: 'http://localhost:8000/media/' + post.img,
+                            img: process.env.REACT_APP_SERVER_URL+'/media/' + post.img,
                             text: post.text
                         })),
                         loading :false

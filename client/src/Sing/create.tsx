@@ -27,7 +27,7 @@ class Create extends React.Component<Props>{
             return;
         }
         console.log(this.state)
-        axios.post('http://localhost:8000/person/create/', this.state)
+        axios.post(process.env.REACT_APP_SERVER_URL+'/person/create/', this.state)
             .then(response => {
                 console.log(response.data);
                 alert(response.data.message)

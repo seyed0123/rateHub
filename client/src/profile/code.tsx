@@ -12,7 +12,7 @@ class Code extends React.Component<qrcode>{
         qr_code: '',
     }
     componentDidMount() {
-        let url :string= 'http://localhost:8000/person/setting/'+this.props.id+'/'
+        let url :string= process.env.REACT_APP_SERVER_URL+'/person/setting/'+this.props.id+'/'
         axios.get(url)
             .then(response => {
                 const userData = response.data;
@@ -21,12 +21,12 @@ class Code extends React.Component<qrcode>{
                     username: userData.username,
                     name: userData.name,
                     bio: userData.boi,
-                    profile: 'http://localhost:8000/media/'+userData.profile_img,
-                    banner: 'http://localhost:8000/media/'+userData.banner_img,
+                    profile: process.env.REACT_APP_SERVER_URL+'/media/'+userData.profile_img,
+                    banner: process.env.REACT_APP_SERVER_URL+'/media/'+userData.banner_img,
                     follow: userData.follower_num,
                     following:userData.following_num,
                     rate:userData.rate_num,
-                    qr_code:'http://localhost:8000/media/'+userData.QRcode,
+                    qr_code: process.env.REACT_APP_SERVER_URL+'/media/'+userData.QRcode,
                 });
                 console.log('userData'+this.state)
             })

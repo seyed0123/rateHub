@@ -22,7 +22,7 @@ class Posts extends React.Component<info> {
     };
 
     componentDidMount() {
-        let url: string = 'http://localhost:8000/post/home/';
+        let url: string = process.env.REACT_APP_SERVER_URL+'/post/home/';
         axios
             .get(url)
             .then((response) => {
@@ -42,8 +42,8 @@ class Posts extends React.Component<info> {
                             id: post.id,
                             owner: post.owner_username,
                             idOwner: post.owner_id,
-                            img: 'http://localhost:8000/media/' + post.img,
-                            imgOwner: 'http://localhost:8000/media/' + post.profile,
+                            img: process.env.REACT_APP_SERVER_URL+'/media/' + post.img,
+                            imgOwner: process.env.REACT_APP_SERVER_URL+'/media/' + post.profile,
                             text: post.text,
                         })),
                     });

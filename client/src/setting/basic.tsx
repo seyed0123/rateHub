@@ -30,7 +30,7 @@ class Basic extends React.Component<info>{
     }
 
     componentDidMount() {
-        let url :string= 'http://localhost:8000/person/setting/'+this.props.id+'/'
+        let url :string= process.env.REACT_APP_SERVER_URL+'/person/setting/'+this.props.id+'/'
         axios.get(url)
             .then(response => {
                 const userData = response.data;
@@ -43,8 +43,8 @@ class Basic extends React.Component<info>{
                     canSearch: userData.can_search,
                     canFollow: userData.can_follow,
                     canComment: userData.can_comment,
-                    profile_img: 'http://localhost:8000/media/'+userData.profile_img,
-                    banner_img: 'http://localhost:8000/media/'+userData.banner_img,
+                    profile_img: process.env.REACT_APP_SERVER_URL+'/media/'+userData.profile_img,
+                    banner_img: process.env.REACT_APP_SERVER_URL+'/media/'+userData.banner_img,
                     loading :false
                 });
             })
@@ -61,7 +61,7 @@ class Basic extends React.Component<info>{
             return;
         }
 
-        let url :string= 'http://localhost:8000/person/setting/'+this.props.id+'/'
+        let url :string= process.env.REACT_APP_SERVER_URL+'/person/setting/'+this.props.id+'/'
         axios.post(url, this.state)
             .then(response => {
                 alert(response.data.message)
@@ -81,7 +81,7 @@ class Basic extends React.Component<info>{
         formData.append('user_id', String(this.state.id));
         formData.append('profile_img', event.target.files[0]);
 
-        axios.post('http://localhost:8000/person/profile', formData)
+        axios.post(process.env.REACT_APP_SERVER_URL+'/person/profile', formData)
             .then((response) => {
                 alert(response.data.message);
                 this.componentDidMount()
@@ -98,7 +98,7 @@ class Basic extends React.Component<info>{
         formData.append('user_id', String(this.state.id));
         formData.append('banner_img', event.target.files[0]);
 
-        axios.post('http://localhost:8000/person/banner', formData)
+        axios.post(process.env.REACT_APP_SERVER_URL+'/person/banner', formData)
             .then((response) => {
                 alert(response.data.message);
                 this.componentDidMount()
