@@ -281,13 +281,14 @@ class recom(View):
                 if user not in user_following:
                     user = person.objects.get(id=user.user)
                     dics.append({'user': user.username, 'id': user.id, 'imgOwner': str(user.profile_img)})
-                if dics:
-                    rec.append(*dics)
+                if dics :
+                    rec.extend(dics)
 
         random_items = []
         for i in range(min(5, len(rec))):
             random_item = random.choice(rec)
-            random_items.append(random_item)
+            if random_item not in random_items:
+                random_items.append(random_item)
 
         return JsonResponse(random_items, safe=False)
 
