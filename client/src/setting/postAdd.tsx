@@ -26,7 +26,7 @@ class PostAdd extends React.Component<info>{
         formData.append('text' , this.state.text);
 
         console.log(event.target.files[0])
-        axios.post('http://localhost:8000/post/new/', formData)
+        axios.post(process.env.REACT_APP_SERVER_URL+'/post/new/', formData)
             .then((response) => {
                 alert(response.data.message);
             })
@@ -50,7 +50,7 @@ class PostAdd extends React.Component<info>{
         formData.append('text' , this.state.story_text);
 
         console.log(event.target.files[0])
-        axios.post('http://localhost:8000/story/new/', formData)
+        axios.post(process.env.REACT_APP_SERVER_URL+'/story/new/', formData)
             .then((response) => {
                 alert(response.data.message);
             })

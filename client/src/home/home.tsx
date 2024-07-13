@@ -28,14 +28,14 @@ class Home extends React.Component<Props>
     }
 
     componentDidMount() {
-        let url :string= 'http://localhost:8000/person/setting/'+this.props.id+'/'
+        let url :string= `${process.env.REACT_APP_SERVER_URL}/person/setting/`+this.props.id+'/'
         axios.get(url)
             .then(response => {
                 const userData = response.data;
                 this.setState({
                     id:userData.id,
                     username: userData.username,
-                    profile: 'http://localhost:8000/media/'+userData.profile_img,
+                    profile: process.env.REACT_APP_SERVER_URL+'/media/'+userData.profile_img,
                     loading :false
                 });
             })
@@ -45,7 +45,7 @@ class Home extends React.Component<Props>
         let form = {
             id: this.props.id
         };
-        let url2 = 'http://localhost:8000/person/recom/';
+        let url2 = process.env.REACT_APP_SERVER_URL+'/person/recom/';
         axios.post(url2, form)
             .then(response => {
                 const userData = response.data;
@@ -54,7 +54,7 @@ class Home extends React.Component<Props>
                     persons: userData.map((user: { id: string; user: string; imgOwner: string; }) => ({
                         id: user.id,
                         user: user.user,
-                        imgOwner: 'http://localhost:8000/media/' + user.imgOwner,
+                        imgOwner: process.env.REACT_APP_SERVER_URL+'/media/' + user.imgOwner,
                     }))
                 });
             })
@@ -71,7 +71,7 @@ class Home extends React.Component<Props>
         let form = {
             search: username
         };
-        let url = 'http://localhost:8000/person/search/';
+        let url = process.env.REACT_APP_SERVER_URL+'/person/search/';
         axios.post(url, form)
             .then(response => {
                 const userData = response.data;
@@ -80,7 +80,7 @@ class Home extends React.Component<Props>
                     persons: userData.map((user: { id: string; username: string; profile: string; }) => ({
                         id: user.id,
                         user: user.username,
-                        imgOwner: 'http://localhost:8000/media/' + user.profile,
+                        imgOwner: process.env.REACT_APP_SERVER_URL+'/media/' + user.profile,
                     }))
                 });
 

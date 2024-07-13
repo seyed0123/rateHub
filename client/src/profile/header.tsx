@@ -39,7 +39,7 @@ class Header extends React.Component<info>{
         this.handelRate = this.handelRate.bind(this);
     }
     componentDidMount() {
-        let url :string= 'http://localhost:8000/person/setting/'+this.props.id+'/'
+        let url :string= process.env.REACT_APP_SERVER_URL+'/person/setting/'+this.props.id+'/'
         axios.get(url)
             .then(response => {
                 const userData = response.data;
@@ -49,8 +49,8 @@ class Header extends React.Component<info>{
                     username: userData.username,
                     name: userData.name,
                     bio: userData.boi,
-                    profile: 'http://localhost:8000/media/'+userData.profile_img,
-                    banner: 'http://localhost:8000/media/'+userData.banner_img,
+                    profile: process.env.REACT_APP_SERVER_URL+'/media/'+userData.profile_img,
+                    banner: process.env.REACT_APP_SERVER_URL+'/media/'+userData.banner_img,
                     follow: userData.follower_num,
                     following:userData.following_num,
                     rate:userData.rate_num,
@@ -59,7 +59,7 @@ class Header extends React.Component<info>{
             .catch(error => {
                 console.error('Error:', error);
             });
-        axios.post('http://localhost:8000/person/is_follow/',{token:localStorage.getItem('token') ,person_id:this.props.id})
+        axios.post(process.env.REACT_APP_SERVER_URL+'/person/is_follow/',{token:localStorage.getItem('token') ,person_id:this.props.id})
             .then(response => {
                 const userData = response.data;
 
@@ -78,7 +78,7 @@ class Header extends React.Component<info>{
             user:this.state.id,
             token:localStorage.getItem('token')
         }
-        axios.post('http://localhost:8000/person/follow/', form)
+        axios.post(process.env.REACT_APP_SERVER_URL+'/person/follow/', form)
             .then(response => {
                 if (response.data.message !== undefined)
                     alert(response.data.message)
@@ -98,7 +98,7 @@ class Header extends React.Component<info>{
             rate:this.state.input_rate,
             token:localStorage.getItem('token')
         }
-        axios.post('http://localhost:8000/person/rate/', form)
+        axios.post(process.env.REACT_APP_SERVER_URL+'/person/rate/', form)
             .then(response => {
                 if (response.data.message !== undefined)
                     alert(response.data.message)

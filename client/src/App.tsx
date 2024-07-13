@@ -16,7 +16,7 @@ class App extends React.Component {
     this.getId = this.getId.bind(this);
   }
   getId(){
-      let url :string= 'http://localhost:8000/person/check/'
+      const url: string = `${process.env.REACT_APP_SERVER_URL}/person/check/`;
       let token = localStorage.getItem('token');
       axios.post(url , {token:token})
           .then(response => {
@@ -36,7 +36,7 @@ class App extends React.Component {
     }
 
     render() {
-      console.log(this.state.id)
+      // console.log(this.state.id)
     return (
         this.state.id === 0 ? <Router>
             <Switch>

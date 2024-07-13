@@ -20,7 +20,7 @@ class SignIn extends React.Component<SignInProps>{
     handleSubmit(event:any) {
         event.preventDefault();
 
-        axios.post('http://localhost:8000/person/login', this.state)
+        axios.post(process.env.REACT_APP_SERVER_URL+'/person/login', this.state)
             .then(response => {
                 console.log(response)
                 if (response.data.message !== undefined)
